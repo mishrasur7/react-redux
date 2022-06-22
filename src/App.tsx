@@ -4,6 +4,7 @@ import './App.css';
 import { useAppDispatch } from './app/hooks';
 import { fetchUser } from './app/reducer/useReducer';
 import { RootState } from './app/store';
+import Counter from './components/Counter';
 
 function App() {
   const dispatch = useAppDispatch()
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       {userList.length > 0 && <p>User list length: {userList.length}</p>}
+      <Counter />
     </div>
   );
 }
